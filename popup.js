@@ -12,12 +12,10 @@ function updateUI(list) {
   });
 }
 
-// Listeyi yükle
 chrome.storage.sync.get("blockedUsers", (data) => {
   if(data.blockedUsers) updateUI(data.blockedUsers);
 });
 
-// Ekle butonu
 addBtn.addEventListener("click", () => {
   const name = userInput.value.trim();
   if(name === "") return;
@@ -31,9 +29,9 @@ addBtn.addEventListener("click", () => {
   });
 });
 
-// Listeyi temizle
 clearBtn.addEventListener("click", () => {
   chrome.storage.sync.set({ blockedUsers: [] }, () => {
     updateUI([]);
   });
+
 });
