@@ -20,11 +20,10 @@ function hideTweets() {
   });
 }
 
-// Sayfa değiştikçe sürekli kontrol
 const observer = new MutationObserver(hideTweets);
 observer.observe(document.body, { childList: true, subtree: true });
 
-// Liste değişirse güncelle
 chrome.storage.onChanged.addListener((changes) => {
   if(changes.blockedUsers) blockedUsers = changes.blockedUsers.newValue;
+
 });
