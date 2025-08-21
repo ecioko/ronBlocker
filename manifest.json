@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ronBlocker",
   "version": "1.0",
-  "description": "İnternette görmek istemediğiniz kişileri engellemek için kolay ve etkili tek çözüm. Developed by @ecioko, ronikpl",
+  "description": "İnternette görmek istemediğiniz kişileri engellemek için kolay ve etkili tek çözüm. Developed by @ecioko",
   "permissions": ["storage", "tabs", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
@@ -20,4 +20,5 @@
   "icons": {
     "48": "icons/icon.png"
   }
+
 }
